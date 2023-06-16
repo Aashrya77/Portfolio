@@ -1,0 +1,232 @@
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/9d0240de3d.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-carousel {
+            position: relative;
+            height: 700px;
+        }
+
+        .carousel {
+            margin: 30px 0 30px 0;
+            width: 100%;
+        }
+
+        .items {
+            width: 100%;
+
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s all;
+        }
+
+        .current {
+            opacity: 1;
+        }
+
+
+
+
+
+        #prevBtn,
+        #nextBtn {
+            height: 35px;
+            width: 35px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            color: black;
+            opacity: 0.7;
+            position: absolute;
+        }
+
+        #prevBtn:hover {
+            opacity: 1;
+        }
+
+        #nextBtn:hover {
+            opacity: 1;
+        }
+
+
+        #prevBtn {
+            top: 50%;
+            left: 3%;
+        }
+
+        #nextBtn {
+            top: 50%;
+            right: 3%;
+        }
+
+
+        .nav-dots {
+            width: 200px;
+            height: 40px;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            z-index: 99;
+        }
+
+        .dot {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+            opacity: 0.5;
+            cursor: pointer;
+            margin-right: 4px;
+
+        }
+
+        .active {
+            opacity: 1;
+        }        
+        
+        @media only screen and (max-width: 600px){
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main-carousel">
+        <div class="carousel">
+            <div class="items">
+                <img src="Screenshot (12).png"
+                    alt="" class="carousel-image current" />
+                <img src="Screenshot (13).png"
+                    alt="" class="carousel-image" />
+                <img src="Screenshot (14).png"
+                    alt="" class="carousel-image" />
+                <img src="Screenshot (15).png" alt=""
+                    class="carousel-image" />
+                <img src="Screenshot (16).png" alt=""
+                    class="carousel-image" />
+                <img src="Screenshot (17).png" alt=""
+                    class="carousel-image" />
+                <img src="Screenshot (18).png" alt=""
+                    class="carousel-image" />
+                <img src="Screenshot (19).png" alt=""
+                    class="carousel-image" />
+            </div>
+        </div>
+
+        <div class="buttons">
+            <i class="fas fa-chevron-left fa-3x" id="prevBtn"></i>
+            <i class="fas fa-chevron-right fa-3x" id="nextBtn"></i>
+        </div>
+        <div class="nav-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <script>
+
+        const images = document.querySelectorAll(".carousel-image");
+        const dots = document.querySelectorAll(".dot");
+        const prevBtn = document.querySelector("#prevBtn");
+        const nextBtn = document.querySelector("#nextBtn");
+
+        const nextSlide = () => {
+            const currentSlide = document.querySelector(".current");
+            currentSlide.classList.remove("current");
+            if (currentSlide.nextElementSibling) {
+                currentSlide.nextElementSibling.classList.add("current");
+            } else {
+                images[0].classList.add("current");
+            }
+
+            dotsNextSlide();
+        };
+
+        const prevSlide = () => {
+            const currentSlide = document.querySelector(".current");
+            currentSlide.classList.remove("current");
+            if (currentSlide.previousElementSibling) {
+                currentSlide.previousElementSibling.classList.add("current");
+            } else {
+                images[images.length - 1].classList.add("current");
+            }
+
+            dotsPrevSlide();
+        };
+
+        nextBtn.addEventListener("click", k => {
+            nextSlide();
+        });
+        prevBtn.addEventListener("click", k => {
+            prevSlide();
+        });
+
+        // =================== Dots ===========================
+        const dotsNextSlide = () => {
+            const dotActive = document.querySelector(".active");
+
+            dotActive.classList.remove("active");
+            if (dotActive.nextElementSibling) {
+                dotActive.nextElementSibling.classList.add("active");
+            } else {
+                dots[0].classList.add("active");
+            }
+            dotActive.classList.remove("active");
+        };
+
+        const dotsPrevSlide = () => {
+            const dotActive = document.querySelector(".active");
+
+            dotActive.classList.remove("active");
+            if (dotActive.previousElementSibling) {
+                dotActive.previousElementSibling.classList.add("active");
+            } else {
+                dots[dots.length - 1].classList.add("active");
+            }
+            dotActive.classList.remove("active");
+        };
+
+        const dotJump = () => {
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    const dotActive = document.querySelector(".active");
+                    dotActive.classList.remove("active");
+                    dot.classList.add("active");
+
+                    const imageTarget = images[index];
+                    const currentSlide = document.querySelector(".current");
+
+                    currentSlide.classList.remove("current");
+                    imageTarget.classList.add("current");
+                });
+            });
+        };
+        dotJump();
+
+    </script>
+</body>
+
+</html>

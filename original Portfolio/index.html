@@ -1,0 +1,205 @@
+<html>
+<head> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/9d0240de3d.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="body">
+    <div id="header">
+        <div class="container">
+            <nav class="nav">
+                <img src="logo2.png" class="logo">
+                <ul id="sidemenu">
+                    <li onclick="closeSideMenu()"><a href="#header">Home</a> </li>
+                    <li onclick="closeSideMenu()"> <a href="#about">About </a> </li>
+                    <li onclick="closeSideMenu()"><a href="#services">Services</a> </li>
+                    <li onclick="closeSideMenu()"><a href="#portfolio">PortFolio</a></li>
+                    <li onclick="closeSideMenu()"><a href="#contactContainer">Contact</a></li>  
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>                  
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="headerText">
+                <p>Web-Designer</p>
+                <h1>Hi, I'm <span>Aashrya</span><br>from Nepal</h1>
+            </div>
+        </div>
+    </div>
+    <!----About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="aboutCol1">
+                    <img src="Backgroundme (2).png">
+                </div>
+                <div class="aboutCol2">
+                    <h1 class="subTitle">About Me</h1>
+                    <p>Aashrya Sigdel is a talented and experienced web developer with a passion for freelancing. At just 20 years old, he has already accumulated several years of experience in the industry, making him a valuable asset to any project he takes on. His skills in web development are second to none, and he has a proven track record of delivering high-quality work that exceeds his clients' expectations. Aashrya's dedication to his craft is apparent in everything he does, from his attention to detail to his commitment to staying up-to-date with the latest technologies and trends in the field. With his impressive skill set and proven expertise, Aashrya is sure to continue making waves in the world of web development for years to come.</p>
+                    <div class="tabTitles">
+                        <p class="tabLinks activeLink" onclick="opentab('skills')">Skills</p>
+                        <p class="tabLinks"  onclick="opentab('experience')">Experience</p>
+                        <p class="tabLinks"  onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tabContents activeTab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Desigining Web interfaces</li>
+                            <li><span>2d animation</span><br>Some cool animations</li>
+                        </ul>
+                    </div>
+                    <div class="tabContents" id="experience">
+                        <ul>
+                            <li><span>2021 - 2022</span><br>Front-end web-development training</li>
+                            <li><span>2022</span><br>2d animation training</li>
+                            <li><span>2023</span><br>Freelancing</li>
+                        </ul>
+                    </div>
+                    <div class="tabContents" id="education">
+                        <ul>
+                            <li><span>2022-current</span><br>C/Javascript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------services------>
+    <div id="services">
+        <div class="container">
+            <h1 class="subTitle">My Services</h1>
+            <div class="servicesList">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h1>Web Design</h1>
+                    <p>Aashrya Sigdel is a skilled and experienced front-end web developer with a passion for creating beautiful, functional websites. With a keen eye for design and a mastery of HTML, CSS, and JavaScript, he is able to bring his clients' visions to life with ease. Aashrya specializes in creating responsive, mobile-friendly websites that are optimized for speed and performance. He is well-versed in modern front-end frameworks such as React and Angular, and is always eager to learn new technologies and techniques to improve his craft. Aashrya's attention to detail and dedication to creating user-friendly interfaces sets him apart from other web developers, and ensures that his clients receive a website that not only looks great, but is also easy to navigate and use.</p>
+                    
+                </div>
+                <div>
+                    <i class="fa-solid fa-video"></i>
+                    <h1>2d Animation</h1>
+                    <p>Aashrya Sigdel is an aspiring 2D animator with a passion for bringing characters and stories to life through animation. Although he has only a little experience in the field, Aashrya is committed to honing his skills and creating engaging animations that captivate audiences. He has a natural talent for creating expressive characters and fluid movements, and has a good understanding of animation principles such as timing, spacing, and squash and stretch. Aashrya is familiar with industry-standard software such as Adobe Animate and Toon Boom, and is constantly seeking out new resources and tutorials to improve his craft. With his creativity, dedication, and willingness to learn, Aashrya is well on his way to becoming a talented and successful 2D animator.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----portfolio---->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subTitle">My Work</h1>
+            <div class="workList">
+                <div class="work">
+                    <img src="https://www.betterup.com/hubfs/Man%20has%20overwork%20and%20sitting%20with%20laptop%20and%20table%20lamp.%20Mental%20work%20with%20paper.%20Empty%20office.jpg">
+                    <div class="layer">
+                        <h3>My Hometown Project</h3>
+                        <p>The project is about my hometown and its features</p>
+                        <a href="#"><i class="fa-solid fa-house-chimney"></i></a>
+                    </div>
+
+
+                </div>
+                <div class="work">
+                    <img src="SMMA Imgs/Screenshot (12).png">
+                    <div class="layer">
+                        <h3>SMMA Project</h3>
+                        <p>In this project I've created a responsive SMMA website design with Blueish theme and with some cool transitions.</p>
+                        <a href="SMMA Imgs/imgs.html"><i class="fa-solid fa-question"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://emilypost.com/client_media/images/blogs/everyday-gym.jpg">
+                    <div class="layer">
+                        <h3>Gym Project</h3>
+                        <p>Coming soon</p>
+                        <a href="#"><i class="fa-solid fa-question"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+<!--contact-->
+<div class="contactMe">
+    <div id="contactContainer">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subTitle">Contact me</h1>
+                <p><i class="fas fa-paper-plane"></i>aashryasigdel0@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>+977-9801431681</p>
+                <div class="social-icons">
+                <a target="_blank" href="https://www.facebook.com/Aashrya7/"><i class="fa-brands fa-facebook"></i></a>
+                <a target="_blank" href="https://twitter.com/AashryaS"><i class="fa-brands fa-twitter-square"></i></a>
+                <a target="_blank" href="https://www.instagram.com/aashrya77/" ><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet" >
+                    <input id="field" type="text" name="Name" placeholder="Your Name" required>
+                    <input id="field" type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea><br>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright Aashrya. Made by <i class="fa-solid fa-heart"></i> Aashrya Sigdel</p>
+    </div>
+</div>
+
+    <script>
+        let tabLinks = document.getElementsByClassName("tabLinks");
+        let tabContents= document.getElementsByClassName("tabContents");
+
+        function opentab(tabname) {
+            for(tabLink of tabLinks) {
+                tabLink.classList.remove("activeLink");
+            }
+            for(tabContent of tabContents) {
+                tabContent.classList.remove("activeTab");
+            }
+            event.currentTarget.classList.add("activeLink");
+            document.getElementById(tabname).classList.add("activeTab");         
+        }
+    </script>
+
+    <script>
+        var sidemenu= document.getElementById("sidemenu");
+
+        function closeSideMenu(){
+            sidemenu.style.right = "-200px"
+        }
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwgjVtUbrGTR3ZuGNn81obTh27eiOYhDvMSh0dTnk4-XlZDC--KrmvVtvsKeNXLti20JQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg= document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(() => {
+                    msg.innerHTML = ""
+                },5000);
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
